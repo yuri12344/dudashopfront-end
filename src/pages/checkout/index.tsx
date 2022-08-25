@@ -1,7 +1,10 @@
+import { CartDetail } from "@src/components/CartDetail"
+
 export default function Checkout(){
     return (
-        <main>
-            <h1>Página Checkout</h1>
-        </main>
+        <>
+         <h1>Checkout</h1>
+         <CartDetail></CartDetail>
+        </>
     )
 }

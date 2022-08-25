@@ -21,7 +21,7 @@ export default function Header() {
                     </ul>
                     <div>
                         <Icon icon="ant-design:search-outlined" />
-                        <span>Search</span>
+                        <input placeholder='Search' type="text"/>
                     </div>
                 </div>
                 
