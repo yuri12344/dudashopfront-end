@@ -9,7 +9,7 @@ export default function Header() {
         <StyledHeader>
             <nav>
                 <Link href="/" >
-                    <Image src="/images/dudastore.png" width={200} height={80} alt="image"/>
+                    <Image src="/images/dudastore.png" width={200} height={60} alt="image"/>
                 </Link>
                 <div>
                     <ul>
