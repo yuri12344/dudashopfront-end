@@ -1,4 +1,5 @@
 import * as S from './styles';
+import Link from 'next/link';
 
 export const ProductDetail = () => {
     return (
@@ -22,6 +23,10 @@ export const ProductDetail = () => {
                             <input type="number" name="quantity" id="" />
                         </fieldset>
                         <button>ADD TO CART</button>
+                        <Link href='/checkout'>
+                            <button>CHECKOUT</button>
+                        </Link>
+                        
                         
                     </div>
                 </div>

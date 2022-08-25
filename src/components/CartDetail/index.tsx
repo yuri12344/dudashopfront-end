@@ -1,10 +1,13 @@
 import {CartItem} from '../CartItem';
+import {StyledCartDetail} from './styles';
 
 export const CartDetail = () => {
     return (
-        <>
-        <h1>Cart detail</h1>
-        <CartItem></CartItem>
-        </>
+        <StyledCartDetail>
+            <CartItem></CartItem>
+            <CartItem></CartItem>
+            <CartItem></CartItem>
+            <CartItem></CartItem>
+        </StyledCartDetail>
     )
 }

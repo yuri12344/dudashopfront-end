@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const StyledProductDetail = styled.div`
-    background-color: red;
     display: flex;
     min-height: calc(100vh - 60px);
     max-width: 1000px;
