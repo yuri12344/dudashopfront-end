@@ -1,6 +1,7 @@
 import Head from "next/head"
-import { StyledHome } from "./styles/style"
+import { StyledHome, ProductContainer } from "./styles/style"
 import Banner from "@src/components/Banner"
+import { Product } from "@src/components/Product"
 
 
 export default function Home() {
@@ -14,6 +15,23 @@ export default function Home() {
         
         <StyledHome>
           <Banner></Banner>
+          <h2>Produtos Populares</h2>
+          <ProductContainer>
+            <Product></Product>
+            <Product></Product>
+            <Product></Product>
+            <Product></Product>
+            <Product></Product>
+            <Product></Product>
+            <Product></Product>
+            <Product></Product>
+            <Product></Product>
+            <Product></Product>
+            <Product></Product>
+            <Product></Product>
+            <Product></Product>
+          </ProductContainer>
+
         </StyledHome>
     </>
   )
