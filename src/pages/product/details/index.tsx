@@ -1,9 +1,13 @@
-import { ProductDetail } from "@src/components/ProductDetail";
+import {ProductDetail} from '../../../components/ProductDetail'
 
-export default function ProductDetailPage() {
+export default function ProductDetailPage(params) {
     return (
         <>
-            <ProductDetail></ProductDetail>
+        <ProductDetail product={params}></ProductDetail>
         </>
     )
 }
+
+ProductDetailPage.getInitialProps = async ({ query }) => {
+    return query
+  }

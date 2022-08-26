@@ -1,15 +1,20 @@
 import * as S from './styles';
 import Link from 'next/link';
+import Image from 'next/image';
 
-export const ProductDetail = () => {
+export const ProductDetail = ({product}) => {
+    console.log(product)
+    const image = product.image === '' ? "/images/camisa_1.png" : product.image;
     return (
         <>
             <S.StyledProductDetail>
-                <div></div>
                 <div>
-                    <h1>Camisa Anry Birds</h1>
+                    <Image src={image} alt={product.name} height={320} width={350} ></Image>
+                </div>
+                <div>
+                    <h1>{product.name}</h1>
                     <h3>Descrição do produto</h3>
-                    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae nobis iure, molestias aspernatur eum nemo voluptatem voluptas consequatur hic reiciendis perferendis modi quis fugit totam dolores, ducimus perspiciatis in cum.</span>
+                    <span>{product.description}</span>
                     <div>
                         <fieldset>
                             <label htmlFor="size">Size</label>
@@ -26,7 +31,6 @@ export const ProductDetail = () => {
                         <Link href='/checkout'>
                             <button>CHECKOUT</button>
                         </Link>
-                        
                         
                     </div>
                 </div>

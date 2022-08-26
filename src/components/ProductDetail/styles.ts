@@ -36,9 +36,8 @@ export const StyledProductDetail = styled.div`
 
     } 
 
-
-    & > div:first-child {
-        width: 100%;
+    & div:first-child {
+        width: 320;
         height: 320px;
         background-color: blue;
     }
