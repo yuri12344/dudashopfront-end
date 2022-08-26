@@ -6,7 +6,6 @@ import React, { useState } from 'react';
 import { GetServerSideProps } from "next";
 const axios = require('axios');
 
-
 export default function Home({products}) {
   return (
     <>
@@ -26,11 +25,33 @@ export default function Home({products}) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  let url = "http://127.0.0.1:8000/api/v1/product/"
+  const url = process.env.NEXT_PUBLIC_API_URL
 
-  const products = await axios.get(url).then(products => {
+
+  const products = await axios.get(url + '/product').then(products => {
     return products
   })
+
+
+
+  let data ={
+    "username": "yuri",
+    "password": 1
+  }
+  const optionslogin = {
+    // The method is POST because we are sending data.
+    method: 'POST',
+    // Tell the server we're sending JSON.
+    headers: {
+      'Content-Type': 'application/json',
+      // 'Authorization': `Token ${process.env.NEXT_PUBLIC_TOKEN}`
+    },
+    url: url + '/login/',
+    data
+  }
+
+  const login = await axios(optionslogin)
+
   return {
     props: {products: products.data}, // will be passed to the page component as props
   }
