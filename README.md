@@ -1,4 +1,4 @@
-![Alt Text](https://github.com/yuri12344/dudashopfront-end/blob/develop/dudashop.GIF)
+<img src="dudashop.gif" />
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
