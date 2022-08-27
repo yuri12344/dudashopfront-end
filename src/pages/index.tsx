@@ -1,4 +1,4 @@
-import { StyledHome } from "./styles/style"
+import { StyledHome } from "../styles/style"
 import {ProductContainer} from "../components/ProductContainer/index"
 import Banner from "@src/components/Banner"
 import { GetServerSideProps } from "next";
@@ -23,28 +23,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     return products
   })
 
-  let credentials ={
-    "username": "dudashop",
-    "password": "dudashop123"
-  }
-
-  const options = {
-    // The method is POST because we are sending data.
-    method: 'POST',
-    // Tell the server we're sending JSON.
-    headers: {
-      'Content-Type': 'application/json',
-      credentials: 'include',
-    },
-
-    // Body of the request is the JSON data we created above.
-    data: credentials,
-    url: url + '/login/',
-  }
-
-
-  const login = await axios(options).then(login => (login))
-  console.log(login)
 
   return {
     props: {products: products.data}

@@ -6,7 +6,7 @@ export default function Layout(Props) {
         <RootStyle>
             <Header />
             <main>
-                {props.children}
+                {Props.children}
             </main>
         </RootStyle>
     )
