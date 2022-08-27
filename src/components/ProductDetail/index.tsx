@@ -23,7 +23,6 @@ export const ProductDetail = ({product}) => {
         }
 
         let url = `${BASE_API_URL}/cart/${product.id}`
-        console.log(url)
         const options = {
             // The method is POST because we are sending data.
             method: 'POST',
@@ -49,7 +48,7 @@ export const ProductDetail = ({product}) => {
         <>
             <S.StyledProductDetail>
                 <div>
-                    <Image src={image} alt={product.name} height={320} width={350} ></Image>
+                    <Image src={image} alt={product.name} height={2000} width={2000} ></Image>
                 </div>
                 <div>
                     <h1>{product.name}</h1>

@@ -7,6 +7,7 @@ import {ProductDetail} from "../ProductDetail"
 
 export const Product = ({product}) => {
     const {id, name, price, image} = product
+
     return (
         <StyledProduct>
             <Link href={{
